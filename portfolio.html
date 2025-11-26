@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drone Photographer</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+</head>
+<body class="m-0 p-0">
+
+<!-- ================= NAVBAR ================= -->
+<nav class="sticky w-full bg-[#1f1f1f] text-white py-4">
+  <div class="max-w-[1400px] mx-auto flex items-center justify-between px-8">
+
+    <!-- LEFT MENU -->
+    <ul class="flex items-center space-x-8 text-[16px] " style="margin-left: 300px;">
+      <li class="text-yellow-400 font-bold">HOME</li>
+      <li class="hover:text-yellow-300 cursor-pointer">SERVICES</li>
+      <li class="hover:text-yellow-300 cursor-pointer">PORTFOLIO</li>
+      <li class="hover:text-yellow-300 cursor-pointer">CLIENT ALBUMS</li>
+      <li class="hover:text-yellow-300 cursor-pointer">ABOUT</li>
+      <li class="hover:text-yellow-300 cursor-pointer">CONTACT</li>
+    </ul>
+
+    <!-- LOGIN BUTTON -->
+    <button class="text-yellow-400 text-lg flex items-center gap-2" style="margin-right: 80px;">
+      <i class="fa-solid fa-user"></i>
+      Log In
+    </button>
+  </div>
+</nav>
+
+<!-- ================= HERO SECTION ================= -->
+<section 
+  class="relative w-full h-screen bg-cover bg-center"
+  style="background-image: url('./img/hero.jpg');"
+>
+
+  <!-- Texts -->
+  <div class="absolute top-[15%] left-1/2 transform -translate-x-1/2 text-center text-white">
+
+      <h2 class="text-3xl font-bold tracking-widest">EVENT HORIZON</h2>
+
+      <!-- Thin Yellow Line -->
+      <div class="w-[3px] h-[160px] bg-yellow-500 mx-auto mt-4"></div>
+
+      <!-- Big Text -->
+      <h1 class="mt-10 text-[85px] font-extrabold leading-none tracking-[3px]">
+        FROM A DIFFERENT <br> POINT OF VIEW
+      </h1>
+  </div>
+
+  <!-- CHAT BUTTON -->
+  <button 
+    class=" fixed right-10 bottom-10 bg-yellow-600 text-white px-10 py-4 text-2xl rounded-sm shadow-lg">
+    CHAT WITH US
+  </button>
+
+</section>
+
+</body>
+</html>
