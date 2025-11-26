@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body class="bg-blue-400">
+<div class="flex justify-center bg-yellow-600  grid grid-rows-1 gap-10 py-20" style="margin-top: 100px; height: 500px; width: 500px; margin-left: 370px;">
+   <h1 class="flex justify-center underline " style="margin-top: -30px;">Sign Up</h1>
+   <label for="name" class=" flex justify-center gap-7 ml-7">Name: <input type="text" name="name" class="bg-violet-300"></label> 
+   <label for="username" class=" flex justify-center gap-6">Username: <input type="text" name="username" class="bg-violet-300"required></label>
+      <label for="username" class=" flex justify-center gap-7 ml-7">Email: <input type="email" name="email" class="bg-violet-300"required></label>
+    <label for="password" class=" flex justify-center gap-7">Password: <input type="password" name="password" class="bg-violet-300"required></label> 
+   <label for="Cpassword" class=" flex justify-center gap-6 mr-14">confrim Password: <input type="password" class="bg-violet-300" required></label>
+   <input type="submit" value="Sign Up" onclick="signup()" class="border-2 border-solid border-red-500  rounded w-20 bg-sky-300" style="margin-left:160px;">
+</div>
+</body>
+<script>
+    function signup() {
+        var name = document.querySelector('input[name="name"]').value;
+        var username = document.querySelector('input[name="username"]').value;
+        var email = document.querySelector('input[name="email"]').value;
+        var password = document.querySelector('input[name="password"]').value;
+
+        if (name && username && email && password) {
+            localStorage.setItem(username, JSON.stringify({name, username, email, password}));
+            window.location.href = "login.html"; 
+        } else {
+            alert("Please fill in all fields.");
+        }
+    }
+</script>
+</html>
