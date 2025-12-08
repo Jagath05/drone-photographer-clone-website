@@ -4,6 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Drone Photographer</title>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <script src="https://kit.fontawesome.com/3f73c5f1b1.js" crossorigin="anonymous"></script>
@@ -17,12 +19,12 @@
 
     <!-- LEFT MENU -->
     <ul class="flex items-center space-x-8 text-[16px] " style="margin-left: 300px;">
-      <li class="text-yellow-400 font-bold">HOME</li>
-      <li class="hover:text-yellow-300 cursor-pointer">SERVICES</li>
-      <li class="hover:text-yellow-300 cursor-pointer">PORTFOLIO</li>
-      <li class="hover:text-yellow-300 cursor-pointer">CLIENT ALBUMS</li>
-      <li class="hover:text-yellow-300 cursor-pointer">ABOUT</li>
-      <li class="hover:text-yellow-300 cursor-pointer">CONTACT</li>
+      <li class="text-yellow-400 font-bold"><a href="./index.html">HOME</a></li>
+      <li class="hover:text-yellow-300 cursor-pointer"><a href="./services.html">SERVICES</a></li>
+      <li class="hover:text-yellow-300 cursor-pointer"><a href="./portfolio.html">PORTFOLIO</a></li>
+      <li class="hover:text-yellow-300 cursor-pointer"><a href="./clientalbums.html">CLIENT ALBUMS</a></li>
+      <li class="hover:text-yellow-300 cursor-pointer"><a href="./about.html">ABOUT</a></li>
+      <li class="hover:text-yellow-300 cursor-pointer"><a href="./contact.html">CONTACT</a></li>
     </ul>
 
     <!-- LOGIN BUTTON -->
@@ -38,7 +40,7 @@
   class="relative flex justify-centerw-full h-screen bg-fixed bg-cover bg-center"
   style="background-image: url('./img/hero.jpg'); height: 600px; object-fit: cover; object-position: 50% 50%;"></section>
   <!-- Texts -->
-  <div class="absolute top-[22%] left-1/2 transform -translate-x-1/2 text-center text-white" > <br>
+  <div class="absolute top-[22%] text-center text-white ml-[489px]" data-aos="fade-dwon" data-aos-duration="3000"> <br>
 
       <h2 class="text-3xl font-bold tracking-widest">EVENT HORIZON</h2>
       <br>
@@ -50,10 +52,10 @@
         FROM A DIFFERENT <br> POINT OF VIEW
       </h1>
       
-      <div class="w-[3px] h-[220px] bg-yellow-500 mx-auto mt-[190px] "></div>
+      <div class="w-[3px] h-[246px] bg-yellow-500 mx-auto mt-[190px]"></div>
       </div>
       <div class="bg-white bg-fixed">
-          <div class="w-[3px] h-[100px] bg-yellow-500 mx-auto mt-[-10px] "> <p class="ml-7 text-yellow-600 text-2xl mt-[100px]">01</p> <h3 class="ml-7 text-5xl font-thinbold text-[#2E2D2D]">SERVICES</h3></div>
+          <div class="w-[3px] h-[100px] mx-auto mt-[-10px] "> <p class="ml-7 text-yellow-600 text-2xl mt-[100px]">01</p> <h3 class="ml-7 text-5xl font-thinbold text-[#2E2D2D]">SERVICES</h3></div>
   </div>
   <!--next session  -->
   <div class="flex justify-around bg-[#2E2D2D] h-[250px] pt-10">
@@ -196,5 +198,7 @@
   function signup(){
     window.location.href = "singup.html";
   }
+
+  AOS.init();
 </script>
 </html>
