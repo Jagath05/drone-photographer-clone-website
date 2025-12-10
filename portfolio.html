@@ -11,23 +11,32 @@
 <body class="m-0 p-0">
 
 <!-- ================= NAVBAR ================= -->
-<nav class="sticky w-full bg-[#1f1f1f] text-white py-4">
+<nav class="sticky top-0 w-full bg-[#1f1f1f] text-white py-4 z-50"> 
   <div class="max-w-[1400px] mx-auto flex items-center justify-between px-8">
 
     <!-- LEFT MENU -->
-    <ul class="flex items-center space-x-8 text-[16px] " style="margin-left: 300px;">
-      <li class="text-yellow-400 font-bold"><a href="./index.html">HOME</a></li>
+    <ul class="flex items-center space-x-8 text-[16px]" style="margin-left: 300px;">
+      <li class="hover:text-yellow-300"><a href="./index.html">HOME</a></li>
       <li class="hover:text-yellow-300 cursor-pointer"><a href="./services.html">SERVICES</a></li>
-      <li class="hover:text-yellow-300 cursor-pointer"><a href="./portfolio.html">PORTFOLIO</a></li>
-      <li class="hover:text-yellow-300 cursor-pointer"><a href="./clientalbums.html">CLIENT ALBUMS</a></li>
-      <li class="hover:text-yellow-300 cursor-pointer"><a href="./about.html">ABOUT</a></li>
-      <li class="hover:text-yellow-300 cursor-pointer"><a href="./contact.html">CONTACT</a></li>
+      <!-- PORTFOLIO WITH DROPDOWN -->
+      <li class="relative group cursor-pointer">
+        <a href="./portfolio.html" class="hover:text-yellow-300 flex items-center">PORTFOLIO</a>
+        <!-- DROPDOWN MENU -->
+        <ul class="absolute left-0 top-full bg-[#1f1f1f] shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 w-52 text-center py-2 space-y-2">
+          <li class="hover:bg-[#333] py-2"><a href="./landscapes.html" class="block">LANDSCAPES</a></li>
+          <li class="hover:bg-[#333] py-2"><a href="./infrastructure.html" class="block">INFRASTRUCTURE</a></li>
+          <li class="hover:bg-[#333] py-2"><a href="./realestate.html" class="block">REAL ESTATE</a></li>
+          <li class="hover:bg-[#333] py-2"><a href="./urban.html" class="block">URBAN</a></li>
+        </ul>
+      </li>
+      <li class="hover:text-yellow-300"><a href="./clientalbums.html">CLIENT ALBUMS</a></li>
+      <li class="hover:text-yellow-300"><a href="./about.html">ABOUT</a></li>
+      <li class="hover:text-yellow-300"><a href="./contact.html">CONTACT</a></li>
     </ul>
-
     <!-- LOGIN BUTTON -->
-    <button class="text-yellow-400 text-lg flex items-center gap-2 " style="margin-right: 80px;">
+    <button class="text-yellow-400 text-lg flex items-center gap-2" style="margin-right: 80px;">
       <i class="fa-solid fa-user"></i>
-      <a href="singup.html">Log In</a> 
+      <a href="signup.html">Log In</a> 
     </button>
   </div>
 </nav>
@@ -46,33 +55,69 @@
 <section class="w-full bg-[#232323] py-24 flex justify-center">
   <div class="grid grid-cols-2 gap-6 max-w-[900px]">
 
-    <img src="./img/v1.mp4" class="w-[430px] h-[430px] object-cover rounded-sm cursor-pointer">
-    <img src="./img/5.jpg" class="w-[430px] h-[430px] object-cover rounded-sm cursor-pointer">
+    <!-- VIDEO (With Hover Overlay) -->
+    <div class="relative group w-[430px] h-[430px] overflow-hidden rounded-sm cursor-pointer">
+      <video src="./img/v1.mp4" class="w-full h-full object-cover" autoplay loop muted playsinline></video>
+      <!-- Hover Overlay -->
+      <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition duration-300 ease-in-out flex flex-col justify-center items-center">
+        <!-- Center Text -->
+        <h2 class="text-white text-xl font-bold tracking-widest">
+          LANDSCAPE VIDEOS
+        </h2>
+        <!-- Download Button -->
+        <a href="./img/v1.mp4" download class="absolute bottom-4 right-4 text-white">
+          <i class="fa-solid fa-download"></i>
+        </a>
+      </div>
+    </div>
 
-    <img src="./img/4.jpeg" class="w-[430px] h-[430px] object-cover rounded-sm cursor-pointer">
-    <img src="./img/i4.jpeg" class="w-[430px] h-[430px] object-cover rounded-sm cursor-pointer">
+    <!-- IMAGE 1 -->
+    <div class="relative group w-[430px] h-[430px] overflow-hidden rounded-sm cursor-pointer">
+      <img src="./img/5.jpg" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center">
+        <h2 class="text-white text-xl font-bold tracking-widest">INFRASTRUCTURE</h2>
+        <a href="./img/5.jpg" download class="absolute bottom-4 right-4 text-white">
+         <i class="fa-solid fa-download"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- IMAGE 2 -->
+    <div class="relative group w-[430px] h-[430px] overflow-hidden rounded-sm cursor-pointer">
+      <img src="./img/4.jpeg" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center">
+        <h2 class="text-white text-xl font-bold tracking-widest">REAL ESTATE</h2>
+        <a href="./img/4.jpeg" download class="absolute bottom-4 right-4 text-white">
+          <i class="fa-solid fa-download"></i>
+        </a>
+      </div>
+    </div>
+
+    <!-- IMAGE 3 -->
+    <div class="relative group w-[430px] h-[430px] overflow-hidden rounded-sm cursor-pointer">
+      <img src="./img/i4.jpeg" class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition flex flex-col justify-center items-center">
+        <h2 class="text-white text-xl font-bold tracking-widest">URBAN</h2>
+        <a href="./img/i4.jpeg" download class="absolute bottom-4 right-4 text-white">
+          <i class="fa-solid fa-download"></i>
+        </a>
+      </div>
+
+    </div>
 
   </div>
 </section>
-
-
-  <!-- CHAT BUTTON -->
-  <button 
-    class=" fixed right-10 bottom-10 bg-yellow-600 text-white px-10 py-4 text-2xl rounded-sm shadow-lg">
-    CHAT WITH US
-  </button>
-
-</section>
+ 
 
 <!-- next session -->
- <div class="bg-white h-[200px]">
-        <div class="w-[3px] h-[100px] bg-yellow-500 ml-[600px]  "></div>
+ <div class="bg-white h-[150px]">
+        <div class="w-[5px] h-[60px] bg-yellow-500 ml-[630px]  "></div>
  </div>
 
  <!-- next session footer -->
   <footer class="bg-[#2E2D2D] text-gray-300 py-14 relative">
     <!-- yellow line -->
-             <div class="w-[3px] h-[50px] bg-yellow-500 ml-[600px] mt-[-56px] mb-[50px] "></div>
+             <div class="w-[5px] h-[50px] bg-yellow-500 ml-[630px] mt-[-56px] mb-[50px] "></div>
 
 
   <!-- Contact / Address -->
@@ -99,6 +144,10 @@
     class="absolute right-[250px] bottom-[65px] text-yellow-500 text-3xl hover:scale-110 transition">
   </button>
 </footer>
-
+ <!-- CHAT BUTTON -->
+  <button 
+    class=" fixed right-10 bottom-10 bg-yellow-600 text-white px-10 py-4 text-2xl rounded-sm shadow-lg">
+    CHAT WITH US
+  </button>
 </body>
 </html>

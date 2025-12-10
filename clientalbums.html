@@ -11,22 +11,32 @@
 <body class="m-0 p-0">
 
 <!-- ================= NAVBAR ================= -->
-<nav class="sticky w-full bg-[#1f1f1f] text-white py-4">
+<nav class="sticky top-0 w-full bg-[#1f1f1f] text-white py-4 z-50"> 
   <div class="max-w-[1400px] mx-auto flex items-center justify-between px-8">
 
     <!-- LEFT MENU -->
-    <ul class="flex items-center space-x-8 text-[16px] " style="margin-left: 300px;">
-      <li class="text-yellow-400 font-bold"><a href="./index.html">HOME</a></li>
+    <ul class="flex items-center space-x-8 text-[16px]" style="margin-left: 300px;">
+      <li class="hover:text-yellow-300"><a href="./index.html">HOME</a></li>
       <li class="hover:text-yellow-300 cursor-pointer"><a href="./services.html">SERVICES</a></li>
-      <li class="hover:text-yellow-300 cursor-pointer"><a href="./portfolio.html">PORTFOLIO</a></li>
-      <li class="hover:text-yellow-300 cursor-pointer"><a href="./clientalbums.html">CLIENT ALBUMS</a></li>
-      <li class="hover:text-yellow-300 cursor-pointer"><a href="./about.html">ABOUT</a></li>
-      <li class="hover:text-yellow-300 cursor-pointer"><a href="./contact.html">CONTACT</a></li>
+      <!-- PORTFOLIO WITH DROPDOWN -->
+      <li class="relative group cursor-pointer">
+        <a href="./portfolio.html" class="hover:text-yellow-300 flex items-center">PORTFOLIO</a>
+        <!-- DROPDOWN MENU -->
+        <ul class="absolute left-0 top-full bg-[#1f1f1f] shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 w-52 text-center py-2 space-y-2">
+          <li class="hover:bg-[#333] py-2"><a href="./landscapes.html" class="block">LANDSCAPES</a></li>
+          <li class="hover:bg-[#333] py-2"><a href="./infrastructure.html" class="block">INFRASTRUCTURE</a></li>
+          <li class="hover:bg-[#333] py-2"><a href="./realestate.html" class="block">REAL ESTATE</a></li>
+          <li class="hover:bg-[#333] py-2"><a href="./urban.html" class="block">URBAN</a></li>
+        </ul>
+      </li>
+      <li class="hover:text-yellow-300"><a href="./clientalbums.html">CLIENT ALBUMS</a></li>
+      <li class="hover:text-yellow-300"><a href="./about.html">ABOUT</a></li>
+      <li class="hover:text-yellow-300"><a href="./contact.html">CONTACT</a></li>
     </ul>
     <!-- LOGIN BUTTON -->
-    <button class="text-yellow-400 text-lg flex items-center gap-2 " style="margin-right: 80px;">
+    <button class="text-yellow-400 text-lg flex items-center gap-2" style="margin-right: 80px;">
       <i class="fa-solid fa-user"></i>
-      <a href="singup.html">Log In</a> 
+      <a href="signup.html">Log In</a> 
     </button>
   </div>
 </nav>
