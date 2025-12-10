@@ -33,37 +33,91 @@
 </nav>
 
 <!-- ================= HERO SECTION ================= -->
-<section 
-  class="relative w-full h-screen bg-cover bg-center"
-  style="background-image: url('./img/hero.jpg');"
->
 
-  <!-- Texts -->
-  <div class="absolute top-[15%] left-1/2 transform -translate-x-1/2 text-center text-white">
-
-      <h2 class="text-3xl font-bold tracking-widest">EVENT HORIZON</h2>
-
-      <!-- Thin Yellow Line -->
-      <div class="w-[3px] h-[160px] bg-yellow-500 mx-auto mt-4"></div>
-
-      <!-- Big Text -->
-      <h1 class="mt-10 text-[85px] font-extrabold leading-none tracking-[3px]">
-        FROM A DIFFERENT <br> POINT OF VIEW
-      </h1>
+<section class="w-full bg-white py-24 text-center ">
+  <h3 class="text-gray-700 tracking-wide font-semibold uppercase text-2xl mt-[-80px]">Event Horizon</h3>
+  <div class="w-[5px] h-[230px] bg-yellow-500 mx-auto mt-[10px]"></div>
+      </div>
+      <div class="">
+          <div class="w-[3px] h-[80px] mx-auto mt-[-210px] "> <p class="ml-7 text-yellow-600 text-2xl mt-[30px]">06</p> <h3 class="ml-7 text-5xl font-thinbold text-[#2E2D2D]">CONTACT</h3></div>
   </div>
+</section>
 
-  <!-- CHAT BUTTON -->
-  <button 
-    class=" fixed right-10 bottom-10 bg-yellow-600 text-white px-10 py-4 text-2xl rounded-sm shadow-lg">
-    CHAT WITH US
-  </button>
+<!-- CONTACT FORM SECTION -->
+<section class="bg-[#222222] text-white py-20 px-10 pl-[150px]">
+  <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-16">
 
+    <!-- LEFT CONTENT -->
+    <div>
+      <h2 class="text-2xl font-bold mb-4">SEND A MESSAGE</h2>
+      <p class="text-gray-300 w-[80%] leading-relaxed">
+        I'm a paragraph. Click here to add your own text and edit me.
+        Let your users get to know you.
+      </p>
+    </div>
+
+    <!-- RIGHT FORM -->
+    <form class="space-y-6 w-full ml-[-80px]">
+
+      <!-- NAME ROW -->
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <label class="block text-sm mb-1">First name *</label>
+          <input type="text" class="w-full bg-transparent border border-gray-500 p-2 text-white outline-none border-4">
+        </div>
+
+        <div>
+          <label class="block text-sm mb-1">Last name *</label>
+          <input type="text" class="w-full bg-transparent border border-gray-500 p-2 text-white outline-none border-4">
+        </div>
+      </div>
+
+      <!-- EMAIL -->
+      <div>
+        <label class="block text-sm mb-1">Email *</label>
+        <input type="email" class="w-full bg-transparent border border-gray-500 p-2 text-white outline-none border-4">
+      </div>
+
+      <!-- SUBJECT -->
+      <div>
+        <label class="block text-sm mb-1">Subject</label>
+        <input type="text" class="w-full bg-transparent border border-gray-500 p-2 text-white outline-none border-4">
+      </div>
+
+      <!-- MESSAGE -->
+      <div>
+        <label class="block text-sm mb-1">Message</label>
+        <textarea class="w-full bg-transparent border border-gray-500 p-2 text-white outline-none h-32 border-4"></textarea>
+      </div>
+
+      <!-- BUTTON -->
+      <button class="ml-[355px] w-[150px] bg-[#C8941E] text-white py-2 px-6 font-bold hover:bg-yellow-600">
+        Submit
+      </button>
+
+    </form>
+
+  </div>
 </section>
 
 <!-- next session -->
- <div class="bg-white h-[200px]">
-        <div class="w-[3px] h-[100px] bg-yellow-500 ml-[600px]  "></div>
- </div>
+
+<!-- GOOGLE MAP SECTION -->
+<section class="w-full h-[600px]">
+  <iframe 
+    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3153.0193103785023!2d-122.42377118468186!3d37.77492977975938!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8085808d5e63cea5%3A0x80ef0252cc1b2d4!2sEvent%20Horizon!5e0!3m2!1sen!2sin!4v1700000000000"
+    width="100%"
+    height="100%"
+    style="border:0; filter: grayscale(100%);"
+    allowfullscreen=""
+    loading="lazy"
+    referrerpolicy="no-referrer-when-downgrade">
+  </iframe>
+</section>
+
+
+  
+
 
  <!-- next session footer -->
   <footer class="bg-[#2E2D2D] text-gray-300 py-14 relative">
@@ -95,5 +149,10 @@
     class="absolute right-[250px] bottom-[65px] text-yellow-500 text-3xl hover:scale-110 transition">
   </button>
 </footer>
+<!-- CHAT BUTTON -->
+  <button 
+    class=" fixed right-10 bottom-10 bg-yellow-600 text-white px-10 py-4 text-2xl rounded-sm shadow-lg">
+    CHAT WITH US
+  </button>
 </body>
 </html>
